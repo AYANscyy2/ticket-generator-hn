@@ -1,0 +1,357 @@
+body {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#main-ticket {
+    font-family: WC ROUGHTRAD Bta;
+    font-weight: 900;
+    font-style: Bold;
+    font-size: 52px;
+    line-height: 140%;
+    letter-spacing: 0%;
+    text-align: center;
+    color: rgba(6, 23, 176, 1);
+}
+
+#main-div {
+    width: 1115px;
+    height: 625px;
+    opacity: 1;
+    border-radius: 20px;
+    border-width: 2.5px;
+    border: 2px solid black;
+}
+
+#ticket-div {
+    width: 1093px;
+    height: 474px;
+    opacity: 1;
+    border-radius: 16px;
+    border-width: 2px;
+    border: 2px solid black;
+    margin-top: 10px;
+    margin-left: 9px;
+    background: linear-gradient(180deg, rgba(5, 52, 199, 0.1) 0%, rgba(5, 52, 199, 0.025) 123.17%);
+    display: flex;
+    position: relative;
+    overflow: hidden;
+}
+
+#left-ticket {
+    width: 754px;
+    height: 423px;
+    opacity: 1;
+    border-radius: 14px;
+    border: 2px solid black;
+    margin-left: 66px;
+    margin-top: 20px;
+    background:
+        radial-gradient(rgba(0, 0, 0, 0.3) 1.2px, transparent 1px) 50px 0 / 50px 50px,
+        linear-gradient(90deg, rgba(0, 194, 255, 0.2) 0%, rgba(255, 255, 255, 0.2) 33%, rgba(0, 194, 255, 0.2) 66%, rgba(255, 255, 255, 0.2) 100%);
+}
+
+#right-ticket {
+    width: 200px;
+    height: 423px;
+    opacity: 1;
+    border-radius: 14px;
+    border: 2px solid black;
+    margin-top: 20px;
+    background-image:
+        radial-gradient(rgba(0, 0, 0, 0.3) 1.2px, transparent 1px),
+        linear-gradient(251.39deg, rgba(0, 194, 255, 0.2) -4.72%, rgba(255, 255, 255, 0.2) 109.51%);
+    background-size:
+        50px 50px,
+        cover;
+}
+
+#blue-ribbon {
+    position: absolute;
+    top: 20px;
+    left: 67px;
+    width: 250px;
+    transform-origin: top left;
+    z-index: 10;
+}
+
+#black-ribbon {
+    position: absolute;
+    top: 20px;
+    left: 67px;
+    width: 250px;
+    transform-origin: top left;
+    z-index: 10;
+}
+
+#qr-code {
+    position: absolute;
+    top: 160px;
+    left: 142px;
+}
+
+#team-details {
+    position: absolute;
+    top: 300px;
+    left: 142px;
+}
+
+#team-details h2 {
+    font-family: AvertaStd-BlackItalic;
+    font-weight: 900;
+    font-size: 36.45px;
+    line-height: 100%;
+
+}
+
+#team-name-id {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    position: relative;
+    margin-top: -15px;
+}
+
+#team-name {
+    font-family: "AvertaStd-Semibold", sans-serif;
+    font-size: 21.87px;
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+}
+
+#team-icon {
+    height: 22px;
+    width: auto;
+}
+
+#hn-title-div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+    margin-left: 290px;
+}
+
+#hn-title-logo {
+    width: auto;
+}
+
+#hn-title {
+    width: auto;
+    margin-top: 10px;
+}
+
+#robot-icon {
+    position: absolute;
+    top: 140px;
+    left: 420px;
+    height: auto;
+}
+
+#date-icon {
+    position: absolute;
+    top: 60px;
+    left: 890px;
+}
+
+#barcode-icon {
+    position: absolute;
+    top: 60px;
+    left: 940px;
+}
+
+.form-container {
+    display: flex;
+    gap: 30px;
+    padding: 30px;
+    padding-bottom: 20px;
+    border-radius: 20px;
+    background-color: #fff;
+    font-family: sans-serif;
+}
+
+#name-input-div,
+#team-input-div {
+    flex: 1;
+    text-align: left;
+}
+
+#name-input-div p,
+#team-input-div p {
+    font-weight: bold;
+    margin: 0 0 10px 0;
+    font-size: 18px;
+    color: #000000;
+}
+
+#name-input,
+#team-name-input {
+    width: 100%;
+    padding: 16px;
+    font-size: 16px;
+    border: 2px solid #000000;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+#name-input::placeholder,
+#team-name-input::placeholder {
+    color: #bbb;
+}
+
+#buttons {
+    margin-top: 30px;
+    display: flex;
+    gap: 20px;
+}
+
+#generate-button,
+#share-button,
+#download-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 7px rgba(17, 0, 78, 1);
+    border-radius: 8px;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+#generate-button {
+    background: rgba(5, 52, 199, 1);
+    color: white;
+    border: 3px solid rgba(17, 0, 78, 1);
+    width: 223px;
+    height: 60px;
+}
+
+#share-button {
+    background: white;
+    color: rgba(5, 52, 199, 1);
+    border: 2px solid rgba(17, 0, 78, 1);
+    width: 172px;
+    height: 60px;
+}
+
+#download-button {
+    background: white;
+    color: rgba(5, 52, 199, 1);
+    border: 2px solid rgba(17, 0, 78, 1);
+    width: 264px;
+    height: 60px;
+}
+
+#generate-button span,
+#share-button span,
+#download-button span {
+    font-family: 'WC ROUGHTRAD Bta', sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 1.2;
+    margin-right: 10px;
+    white-space: nowrap;
+}
+
+.main-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+
+.content-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.color-picker-container {
+    width: 143px;
+    padding: 20px;
+    font-family: sans-serif;
+    margin-top: -200px;
+}
+
+.color-picker-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    margin: 0 0 50px 0;
+}
+
+.color-swatches {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+}
+
+.color-swatch {
+    width: 32px;
+    height: 32px;
+    border: 2px solid black;
+    cursor: pointer;
+    padding: 0;
+    transition: transform 0.2s ease;
+}
+
+.color-swatch:hover {
+    transform: scale(1.1);
+}
+
+#left-ticket,
+#right-ticket {
+    border: none;
+}
+
+.perforation-line {
+    width: 2px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    background-image: repeating-linear-gradient(
+        transparent,
+        transparent 5px,
+        black 1px,
+        black 10px
+    );
+}
+
+
+.name-blue {
+  background: linear-gradient(90deg, #030A4A 0%, #808DFF 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.name-green {
+  background: linear-gradient(90.01deg, #00814B 0.01%, #3CDE9A 70.75%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.name-violet {
+  background: linear-gradient(90deg, #510072 0%, #DF91FF 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.team-blue {
+  color: rgba(5, 52, 199, 1);
+}
+
+.team-green {
+  color: rgba(4, 144, 86, 1);
+}
+
+.team-violet {
+  color: rgba(81, 0, 114, 1);
+}
+
+

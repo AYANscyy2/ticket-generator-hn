@@ -36,9 +36,11 @@ function Ticket({ name, team, theme }) {
 
   const leftTicketStyle = {
     background: `${dotPattern}, ${currentTheme.leftTicketBG}`,
+    borderRadius: "14px 52px 52px 14px",
   };
   const rightTicketStyle = {
     background: `radial-gradient(rgba(0, 0, 0, 0.3) 1.2px, transparent 1px) 0 0 / 50px 50px, ${currentTheme.rightTicketBG}`,
+    borderRadius: "52px 14px 14px 52px",
   };
 
   return (
@@ -97,7 +99,7 @@ function Ticket({ name, team, theme }) {
 
       <div className="perforation-line"></div>
 
-      <div id="right-ticket" style={rightTicketStyle}>
+      <div id="right-ticket"  style={rightTicketStyle}>
         <img
           id="date-icon"
           src="https://res.cloudinary.com/deuadrvkj/image/upload/v1759446490/1st-2nd_November_2025_zj0azh.svg"

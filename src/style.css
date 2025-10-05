@@ -34,7 +34,10 @@ body {
     border: 2px solid black;
     margin-top: 10px;
     margin-left: 9px;
-    background: linear-gradient(180deg, rgba(5, 52, 199, 0.1) 0%, rgba(5, 52, 199, 0.025) 123.17%);
+    background:linear-gradient(180deg, rgba(5, 52, 199, 0.1) 0%, rgba(5, 52, 199, 0.025) 123.17%);
+    box-shadow: -1px 2px 9.8px 0px #FFFFFF40 inset;
+    box-shadow: 0px 18px 59.6px 0px #0534C733 inset;
+    backdrop-filter: blur(80px);
     display: flex;
     position: relative;
     overflow: hidden;
@@ -308,17 +311,6 @@ body {
     border: none;
 }
 
-.perforation-line {
-    width: 2px;
-    margin-top: 20px;
-    margin-bottom: 30px;
-    background-image: repeating-linear-gradient(
-        transparent,
-        transparent 5px,
-        black 1px,
-        black 10px
-    );
-}
 
 
 .name-blue {
@@ -355,3 +347,18 @@ body {
 }
 
 
+.perforation-line {
+        width: 1.82px; 
+        margin-top: 55px;
+        margin-bottom: 55px;
+        background-repeat: repeat-y;
+        background-position: center;
+       
+        background-image: repeating-linear-gradient(
+            to bottom,
+            #0534C7 0px,
+            #0534C7 17.312px,
+            transparent 17.312px,
+            transparent 34.624px
+        );
+}

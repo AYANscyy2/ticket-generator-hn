@@ -4,10 +4,12 @@ import TicketForm from "./components/TicketForm.jsx";
 import ActionButtons from "./components/ActionButtons.jsx";
 import ColorPicker from "./components/ColorPicker.jsx";
 import React from "react";
-
+import { useNavigate } from "react-router-dom";
 import "./style.css";
 
 function App() {
+  const navigate = useNavigate();
+
   const [name, setName] = useState("Enter Your Name");
   const [team, setTeam] = useState("Team Name");
   const [theme, setTheme] = useState("blue");
@@ -15,36 +17,19 @@ function App() {
   const [inputName, setInputName] = useState("");
   const [inputTeam, setInputTeam] = useState("");
 
-  const handleGenerate = async () => {
+  const handleGenerate = () => {
     if (!inputName.trim() || !inputTeam.trim()) {
       alert("Please fill in both name and team name!");
       return;
     }
 
-    try {
-      const response = await fetch(
-        `https://your-backend-api.com/api/ticket?name=${encodeURIComponent(
-          inputName
-        )}&team=${encodeURIComponent(inputTeam)}`
-      );
+    const query = new URLSearchParams({
+      name: inputName,
+      team: inputTeam,
+      theme,
+    }).toString();
 
-      const data = await response.json();
-
-      setName(data.name || inputName);
-      setTeam(data.team || inputTeam);
-    } catch (error) {
-      console.error("Error generating ticket:", error);
-      setName(inputName);
-      setTeam(inputTeam);
-    }
-
-    setInputName("");
-    setInputTeam("");
-
-    const nameInputEl = document.getElementById("name-input");
-    const teamInputEl = document.getElementById("team-name-input");
-    if (nameInputEl) nameInputEl.value = "";
-    if (teamInputEl) teamInputEl.value = "";
+    navigate(`/ticket?${query}`);
   };
 
   return (

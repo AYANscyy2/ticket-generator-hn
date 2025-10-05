@@ -22,14 +22,14 @@ function ActionButtons({ onGenerateClick }) {
         />
       </button>
 
-      <button id="download-button">
+      {/* <button id="download-button">
         <span>Download</span>
         <img
           src="https://res.cloudinary.com/deuadrvkj/image/upload/v1759471077/DownloadSimple_q8ahhy.png"
           id="download-icon"
           alt="Download Icon"
         />
-      </button>
+      </button> */}
     </div>
   );
 }

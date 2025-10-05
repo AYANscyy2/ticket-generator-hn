@@ -362,3 +362,153 @@ body {
             transparent 34.624px
         );
 }
+
+
+#buttons {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;  
+  align-items: center;       
+  gap: 20px;
+  width: 100%;              
+}
+
+
+/* ====== RESPONSIVE DESIGN ====== */
+
+/* --- Tablet (max-width: 1200px) --- */
+@media (max-width: 1200px) {
+  #main-div {
+    width: 90%;
+    height: auto;
+  }
+
+  #ticket-div {
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #left-ticket,
+  #right-ticket {
+    width: 90%;
+    height: auto;
+    margin: 20px 0;
+  }
+
+  #hn-title-div {
+    margin-left: 0;
+    justify-content: center;
+  }
+
+  .main-container {
+    flex-direction: column;
+    gap: 60px;
+  }
+
+  .color-picker-container {
+    margin-top: 0;
+  }
+}
+
+/* --- Mobile (max-width: 768px) --- */
+@media (max-width: 768px) {
+  #main-ticket {
+    font-size: 36px;
+  }
+
+  #main-div {
+    width: 95%;
+    border-width: 2px;
+    height: auto;
+  }
+
+  #ticket-div {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+  }
+
+  #left-ticket,
+  #right-ticket {
+    width: 95%;
+    height: auto;
+    margin: 10px 0;
+  }
+
+  .form-container {
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+  }
+
+  #name-input,
+  #team-name-input {
+    font-size: 14px;
+    padding: 12px;
+  }
+
+  #buttons {
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+  }
+
+  #generate-button,
+  #share-button,
+  #download-button {
+    width: 80%;
+    height: 55px;
+    font-size: 18px;
+  }
+
+  .color-picker-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+  }
+
+  .color-swatches {
+    flex-direction: row;
+    gap: 30px;
+  }
+}
+
+/* --- Small Mobile (max-width: 480px) --- */
+@media (max-width: 480px) {
+  #main-ticket {
+    font-size: 28px;
+  }
+
+  #generate-button,
+  #share-button,
+  #download-button {
+    width: 90%;
+    font-size: 16px;
+  }
+
+  #team-details h2 {
+    font-size: 24px;
+  }
+
+  #team-name {
+    font-size: 16px;
+  }
+
+  #qr-code,
+  #robot-icon,
+  #barcode-icon,
+  #date-icon {
+    position: static;
+    margin: 10px auto;
+  }
+
+  #hn-title-div {
+    flex-direction: column;
+    align-items: center;
+    margin-left: 0;
+  }
+}

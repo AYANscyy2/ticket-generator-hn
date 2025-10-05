@@ -11,6 +11,7 @@ function Ticket({ name, team, theme }) {
       rightTicketBG: `linear-gradient(251.39deg, rgba(0, 194, 255, 0.35) -4.72%, rgba(255, 255, 255, 0.15) 109.51%)`,
       nameClass: "name-blue",
       teamClass: "team-blue",
+      perforationColor: "#0534C7",
       teamIconSrc:
         "https://res.cloudinary.com/deuadrvkj/image/upload/v1759453552/UsersThree_hadgwy.png",
     },
@@ -19,6 +20,7 @@ function Ticket({ name, team, theme }) {
       rightTicketBG: `linear-gradient(251.39deg, rgba(20, 241, 149, 0.35) -4.72%, rgba(255, 255, 255, 0.15) 109.51%)`,
       nameClass: "name-green",
       teamClass: "team-green",
+      perforationColor: "#049056",
       teamIconSrc:
         "https://res.cloudinary.com/deuadrvkj/image/upload/v1759520469/UsersThree-green_otralk.png",
     },
@@ -27,6 +29,7 @@ function Ticket({ name, team, theme }) {
       rightTicketBG: `linear-gradient(251.39deg, rgba(81, 0, 114, 0.35) -4.72%, rgba(255, 255, 255, 0.15) 109.51%)`,
       nameClass: "name-violet",
       teamClass: "team-violet",
+      perforationColor: "#510072",
       teamIconSrc:
         "https://res.cloudinary.com/deuadrvkj/image/upload/v1759520470/UsersThree-purple_ekepeq.png",
     },
@@ -36,9 +39,11 @@ function Ticket({ name, team, theme }) {
 
   const leftTicketStyle = {
     background: `${dotPattern}, ${currentTheme.leftTicketBG}`,
+    borderRadius: "14px 52px 52px 14px",
   };
   const rightTicketStyle = {
     background: `radial-gradient(rgba(0, 0, 0, 0.3) 1.2px, transparent 1px) 0 0 / 50px 50px, ${currentTheme.rightTicketBG}`,
+    borderRadius: "52px 14px 14px 52px",
   };
 
   return (
@@ -95,9 +100,14 @@ function Ticket({ name, team, theme }) {
         />
       </div>
 
-      <div className="perforation-line"></div>
+      <div
+        className="perforation-line"
+        style={{
+          backgroundImage: `repeating-linear-gradient(to bottom, ${currentTheme.perforationColor} 0px, ${currentTheme.perforationColor} 17.312px, transparent 17.312px, transparent 34.624px)`,
+        }}
+      ></div>
 
-      <div id="right-ticket" style={rightTicketStyle}>
+      <div id="right-ticket"  style={rightTicketStyle}>
         <img
           id="date-icon"
           src="https://res.cloudinary.com/deuadrvkj/image/upload/v1759446490/1st-2nd_November_2025_zj0azh.svg"

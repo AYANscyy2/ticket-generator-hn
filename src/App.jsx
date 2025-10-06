@@ -33,25 +33,26 @@ function App() {
   };
 
   return (
-    <>
-      <h1 id="main-ticket">GENERATE YOUR TICKET</h1>
-      <div className="main-container">
-        <div className="content-section">
-          <div id="main-div">
-            <div className="app-container">
-              <Ticket name={name} team={team} theme={theme} />
-              <TicketForm
-                setInputName={setInputName}
-                setInputTeam={setInputTeam}
-              />
+    <div className="center-container">
+      <div className="scale-wrapper">
+        <h1 id="main-ticket">GENERATE YOUR TICKET</h1>
+        <div className="main-container">
+          <div className="content-section">
+            <div id="main-div">
+              <div className="app-container">
+                <Ticket name={name} team={team} theme={theme} />
+                <TicketForm
+                  setInputName={setInputName}
+                  setInputTeam={setInputTeam}
+                />
+              </div>
             </div>
+            <ActionButtons onGenerateClick={handleGenerate} />
           </div>
-          <ActionButtons onGenerateClick={handleGenerate} />
+          <ColorPicker setTheme={setTheme} />
         </div>
-
-        <ColorPicker setTheme={setTheme} />
       </div>
-    </>
+    </div>
   );
 }
 

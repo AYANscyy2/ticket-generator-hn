@@ -17,9 +17,13 @@ function TicketPage() {
   };
 
   return (
-    <div className="ticket-page-container">
-      <Ticket name={name} team={team} theme={theme} />
-      <ActionButtons onGenerateClick={handleGenerate} />
+    <div className="center-container">
+      <div className="scale-wrapper">
+        <div className="ticket-page-container">
+          <Ticket name={name} team={team} theme={theme} />
+          <ActionButtons onGenerateClick={handleGenerate} />
+        </div>
+      </div>
     </div>
   );
 }

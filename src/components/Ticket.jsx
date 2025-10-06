@@ -47,6 +47,7 @@ function Ticket({ name, team, theme }) {
   };
 
   return (
+    // ✅ Wrapper removed from here
     <div id="ticket-div">
       <div id="left-ticket" style={leftTicketStyle}>
         <img
@@ -107,7 +108,7 @@ function Ticket({ name, team, theme }) {
         }}
       ></div>
 
-      <div id="right-ticket"  style={rightTicketStyle}>
+      <div id="right-ticket" style={rightTicketStyle}>
         <img
           id="date-icon"
           src="https://res.cloudinary.com/deuadrvkj/image/upload/v1759446490/1st-2nd_November_2025_zj0azh.svg"
@@ -122,5 +123,4 @@ function Ticket({ name, team, theme }) {
     </div>
   );
 }
-
 export default Ticket;

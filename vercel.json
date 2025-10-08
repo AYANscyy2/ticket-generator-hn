@@ -1,0 +1,10 @@
+{
+  "functions": {
+    "api/og.js": {
+      "runtime": "edge"
+    }
+  },
+  "routes": [
+    { "src": "/api/og", "dest": "/api/og.js" }
+  ]
+}

@@ -47,8 +47,8 @@ function Ticket({ name, team, theme }) {
   };
 
   return (
-    // ✅ Wrapper removed from here
-    <div id="ticket-div">
+    <div id="ticket-div-container">
+      <div id="ticket-div">
       <div id="left-ticket" style={leftTicketStyle}>
         <img
           id="blue-ribbon"
@@ -119,6 +119,7 @@ function Ticket({ name, team, theme }) {
           src="https://res.cloudinary.com/deuadrvkj/image/upload/v1759446489/bar-code_nibq4m.svg"
           alt="Barcode"
         />
+      </div>
       </div>
     </div>
   );

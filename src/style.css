@@ -29,6 +29,16 @@ body {
     width: 1093px;
     height: 474px;
     opacity: 1;
+    
+    display: flex;
+    position: relative;
+    overflow: hidden;
+}
+
+#ticket-div-container {
+    width: 1093px;
+    height: 474px;
+    opacity: 1;
     border-radius: 16px;
     border-width: 2px;
     border: 2px solid black;
@@ -42,6 +52,8 @@ body {
     position: relative;
     overflow: hidden;
 }
+
+
 
 #left-ticket {
     width: 754px;

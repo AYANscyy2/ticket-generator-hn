@@ -1,16 +1,30 @@
+:root {
+    --bg-img: url("https://res.cloudinary.com/dscnitrourkela/image/upload/v1756245870/hacknitr/o31lzgdhnrkyvfbwwg33.png");
+}
+.body-txt {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-optical-sizing: auto;
+}
 body {
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    scroll-behavior: smooth;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: var(--bg-img);
+    background-repeat: repeat;
+    opacity: 0.4;
+    z-index: -10;
+    background-color: #ffffff;
 }
 
 #main-ticket {
     font-family: WC ROUGHTRAD Bta;
-    font-weight: 900;
-    font-style: Bold;
+    font-weight: 600;
     font-size: 52px;
-    line-height: 140%;
     letter-spacing: 0%;
     text-align: center;
     color: rgba(6, 23, 176, 1);
@@ -29,7 +43,7 @@ body {
     width: 1093px;
     height: 474px;
     opacity: 1;
-    
+
     display: flex;
     position: relative;
     overflow: hidden;
@@ -44,16 +58,18 @@ body {
     border: 2px solid black;
     margin-top: 10px;
     margin-left: 9px;
-    background:linear-gradient(180deg, rgba(5, 52, 199, 0.1) 0%, rgba(5, 52, 199, 0.025) 123.17%);
-    box-shadow: -1px 2px 9.8px 0px #FFFFFF40 inset;
-    box-shadow: 0px 18px 59.6px 0px #0534C733 inset;
+    background: linear-gradient(
+        180deg,
+        rgba(5, 52, 199, 0.1) 0%,
+        rgba(5, 52, 199, 0.025) 123.17%
+    );
+    box-shadow: -1px 2px 9.8px 0px #ffffff40 inset;
+    box-shadow: 0px 18px 59.6px 0px #0534c733 inset;
     backdrop-filter: blur(80px);
     display: flex;
     position: relative;
     overflow: hidden;
 }
-
-
 
 #left-ticket {
     width: 754px;
@@ -63,9 +79,15 @@ body {
     border: 2px solid black;
     margin-left: 66px;
     margin-top: 20px;
-    background:
-        radial-gradient(rgba(0, 0, 0, 0.3) 1.2px, transparent 1px) 50px 0 / 50px 50px,
-        linear-gradient(90deg, rgba(0, 194, 255, 0.2) 0%, rgba(255, 255, 255, 0.2) 33%, rgba(0, 194, 255, 0.2) 66%, rgba(255, 255, 255, 0.2) 100%);
+    background: radial-gradient(rgba(0, 0, 0, 0.3) 1.2px, transparent 1px) 50px
+            0 / 50px 50px,
+        linear-gradient(
+            90deg,
+            rgba(0, 194, 255, 0.2) 0%,
+            rgba(255, 255, 255, 0.2) 33%,
+            rgba(0, 194, 255, 0.2) 66%,
+            rgba(255, 255, 255, 0.2) 100%
+        );
 }
 
 #right-ticket {
@@ -75,12 +97,13 @@ body {
     border-radius: 14px;
     border: 2px solid black;
     margin-top: 20px;
-    background-image:
-        radial-gradient(rgba(0, 0, 0, 0.3) 1.2px, transparent 1px),
-        linear-gradient(251.39deg, rgba(0, 194, 255, 0.2) -4.72%, rgba(255, 255, 255, 0.2) 109.51%);
-    background-size:
-        50px 50px,
-        cover;
+    background-image: radial-gradient(rgba(0, 0, 0, 0.3) 1.2px, transparent 1px),
+        linear-gradient(
+            251.39deg,
+            rgba(0, 194, 255, 0.2) -4.72%,
+            rgba(255, 255, 255, 0.2) 109.51%
+        );
+    background-size: 50px 50px, cover;
 }
 
 #blue-ribbon {
@@ -105,6 +128,19 @@ body {
     position: absolute;
     top: 160px;
     left: 142px;
+    height: 150px;
+    width: 150px;
+    border-radius: 10px;
+}
+
+#qr-code-text {
+    position: absolute;
+    top: 148px;
+    left: 320px;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 15px;
+    color: #0e3659;
+    font-weight: 500;
 }
 
 #team-details {
@@ -117,8 +153,7 @@ body {
     font-family: AvertaStd-BlackItalic;
     font-weight: 900;
     font-size: 36.45px;
-    line-height: 100%;
-
+    line-height: 120%;
 }
 
 #team-name-id {
@@ -196,7 +231,7 @@ body {
 
 #name-input-div p,
 #team-input-div p {
-    font-weight: bold;
+    font-weight: 600;
     margin: 0 0 10px 0;
     font-size: 18px;
     color: #000000;
@@ -262,7 +297,7 @@ body {
 #generate-button span,
 #share-button span,
 #download-button span {
-    font-family: 'WC ROUGHTRAD Bta', sans-serif;
+    font-family: "WC ROUGHTRAD Bta", sans-serif;
     font-weight: 700;
     font-size: 24px;
     line-height: 1.2;
@@ -323,82 +358,63 @@ body {
     border: none;
 }
 
-
-
 .name-blue {
-  background: linear-gradient(90deg, #030A4A 0%, #808DFF 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
+    background: linear-gradient(90deg, #030a4a 0%, #808dff 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
 }
 
 .name-green {
-  background: linear-gradient(90.01deg, #00814B 0.01%, #3CDE9A 70.75%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
+    background: linear-gradient(90.01deg, #00814b 0.01%, #3cde9a 70.75%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
 }
 
 .name-violet {
-  background: linear-gradient(90deg, #510072 0%, #DF91FF 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
+    background: linear-gradient(90deg, #510072 0%, #df91ff 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
 }
 
 .team-blue {
-  color: rgba(5, 52, 199, 1);
+    color: rgba(5, 52, 199, 1);
 }
 
 .team-green {
-  color: rgba(4, 144, 86, 1);
+    color: rgba(4, 144, 86, 1);
 }
 
 .team-violet {
-  color: rgba(81, 0, 114, 1);
+    color: rgba(81, 0, 114, 1);
 }
-
 
 .perforation-line {
-        width: 1.82px; 
-        margin-top: 55px;
-        margin-bottom: 55px;
-        background-repeat: repeat-y;
-        background-position: center;
-       
-        background-image: repeating-linear-gradient(
-            to bottom,
-            #0534C7 0px,
-            #0534C7 17.312px,
-            transparent 17.312px,
-            transparent 34.624px
-        );
-}
+    width: 1.82px;
+    margin-top: 55px;
+    margin-bottom: 55px;
+    background-repeat: repeat-y;
+    background-position: center;
 
+    background-image: repeating-linear-gradient(
+        to bottom,
+        #0534c7 0px,
+        #0534c7 17.312px,
+        transparent 17.312px,
+        transparent 34.624px
+    );
+}
 
 #buttons {
-  margin-top: 30px;
-  display: flex;
-  justify-content: center;  
-  align-items: center;       
-  gap: 20px;
-  width: 100%;              
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 @media (max-width: 1200px) {
 }
@@ -407,25 +423,22 @@ body {
 }
 
 @media (max-width: 480px) {
-  #hn-title-div {
-    flex-direction: column;
-    align-items: center;
-    margin-left: 0;
-  }
+    #hn-title-div {
+        flex-direction: column;
+        align-items: center;
+        margin-left: 0;
+    }
 }
-
 
 body {
     overflow-x: hidden;
 }
 
-
-
-
 .center-container {
-    width: 100%;
-    display: flex;
-    justify-content: center;
+    display: grid;
+    place-items: center;
+    min-height: 100dvh;
+    min-width: 100dvw;
 }
 
 .scale-wrapper {
@@ -434,7 +447,7 @@ body {
     transform-origin: top center;
 }
 
-@media (max-width: 1115px) {
+@media (max-width: 1300px) {
     .scale-wrapper {
         --scale-factor: calc(100vw / 1140px);
         transform: scale(var(--scale-factor));
@@ -454,7 +467,6 @@ body {
         gap: 30px;
     }
 }
-
 
 @media (max-height: 500px) and (max-width: 900px) and (orientation: landscape) {
     .scale-wrapper {

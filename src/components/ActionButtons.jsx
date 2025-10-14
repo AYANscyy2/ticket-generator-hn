@@ -1,6 +1,6 @@
 import React from "react";
 
-function ActionButtons({ onGenerateClick }) {
+function ActionButtons({ onGenerateClick,onShareClick }) {
   return (
     <div id="buttons">
       <button id="generate-button" onClick={onGenerateClick}>
@@ -13,7 +13,7 @@ function ActionButtons({ onGenerateClick }) {
         />
       </button>
 
-      <button id="share-button">
+      <button id="share-button" onClick={onShareClick}>
         <span>Share</span>
         <img
           src="https://res.cloudinary.com/deuadrvkj/image/upload/v1759471077/ShareNetwork_zykzlp.png"
